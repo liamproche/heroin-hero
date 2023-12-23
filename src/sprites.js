@@ -1,5 +1,4 @@
 initSprites = function () {
-
     addItems();
     for (var i = 0; i < map.length; i++) {
         spritePosition[i] = [];
@@ -29,7 +28,7 @@ var sprites = [];
 var mapSprites = [];
 var spritePosition = [];
 var itemTypes = [
-    { img: 'src/assets/bush.png', block: false },
+    { img: 'src/assets/bush.png', block: true },
 ];
 
 //----------------------------------------------------------
@@ -96,4 +95,6 @@ renderSprites = function () {
     }
 }
 
+
 //----------------------------------------------------------
+

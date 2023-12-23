@@ -1,5 +1,4 @@
 initEnemies = function () {
-
     addEnemies();
     var screen = $('screen');
     for (var i = 0; i < mapEnemies.length; i++) {
@@ -36,6 +35,9 @@ initEnemies = function () {
 
 var enemies = [];
 var mapEnemies = [];
+
+var Dragon = []
+var mapDragon = []
 
 //----------------------------------------------------------
 

@@ -5,7 +5,7 @@ window.onload = function () {
 
     addKeys();
     initScreen();
-    initSprites();
+    initSprites()
     initEnemies();
     drawMap();
     gameCycle();

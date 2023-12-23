@@ -49,6 +49,7 @@ drawMap = function () {
     var container = $("map");
     var miniMap = $("minimap");
     var objects = $("objects");
+ 
 
     //canvas size
     miniMap.width = mapWidth * mapScale;
@@ -88,7 +89,8 @@ drawMap = function () {
                 );
             }
         }
-    }
+    } 
+
 }
 
 //----------------------------------------------------------
@@ -96,9 +98,9 @@ drawMap = function () {
 updateMap = function () {
     var miniMap = $("minimap");
     var objects = $("objects");
-
     var objectCtx = objects.getContext("2d");
     objectCtx.clearRect(0, 0, miniMap.width, miniMap.height);
+
 
     objectCtx.fillStyle = "black";
     objectCtx.fillRect(
@@ -117,6 +119,12 @@ updateMap = function () {
             4, 4
         );
     }
+
+
+
+
+
 }
 
 //----------------------------------------------------------
+
