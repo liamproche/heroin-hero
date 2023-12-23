@@ -36,8 +36,6 @@ initEnemies = function () {
 var enemies = [];
 var mapEnemies = [];
 
-var Dragon = []
-var mapDragon = []
 
 //----------------------------------------------------------
 
