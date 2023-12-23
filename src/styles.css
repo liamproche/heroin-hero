@@ -39,6 +39,21 @@ body {
 #dragon {
     position: absolute;
     left: 200px;
-    top: 120px;
+    top: 20%;
     z-index: 99998;
 }
+#player {
+    position: absolute;
+    left: 7%;
+    /* right: 7%; */
+    top: 50%;
+    z-index: 99997;
+}
+#shootup{
+    z-index: 99996;
+    position: absolute;
+    right: 9%;
+    top: 55%;
+    display: none;
+}
+

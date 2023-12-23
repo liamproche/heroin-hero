@@ -38,6 +38,7 @@ gameCycle = function () {
     }
     lastGameCycleTime = now;
     setTimeout(gameCycle, cycleDelay);
+
 }
 
 //----------------------------------------------------------
@@ -55,3 +56,21 @@ renderCycle = function () {
 }
 
 //----------------------------------------------------------
+
+window.addEventListener("keydown", (e)=>{
+    if(e.code == "Space"){
+        document.getElementById('player').style.display = "none"
+        document.getElementById('shootup').style.display = "block"
+        console.log("pressed")
+
+    }
+})
+window.addEventListener("keyup", (e)=>{
+    if(e.code == "Space"){
+        document.getElementById('player').style.display = "block"
+        document.getElementById('shootup').style.display = "none"
+        console.log("pressed")
+
+    }
+})
+
