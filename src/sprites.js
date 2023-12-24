@@ -1,5 +1,5 @@
 initSprites = function () {
-    addItems();
+    // addItems();
     for (var i = 0; i < map.length; i++) {
         spritePosition[i] = [];
     }
@@ -17,39 +17,39 @@ initSprites = function () {
         sprite.block = itemType.block;
         sprite.img = img;
         spritePosition[sprite.y][sprite.x] = sprite;
-        // sprites.push(sprite);
-        // screen.appendChild(img);
+        sprites.push(sprite);
+        screen.appendChild(img);
     }
 }
 
 //----------------------------------------------------------
 
-// var sprites = [];
-// var mapSprites = [];
-// var spritePosition = [];
-// var itemTypes = [
-//     { img: 'src/assets/bush.png', block: true },
-// ];
+var sprites = [];
+var mapSprites = [];
+var spritePosition = [];
+var itemTypes = [
+    { img: 'src/assets/bush.png', block: true },
+];
 
 //----------------------------------------------------------
 
-addItems = function () {
-    for (var y = 0; y < mapHeight; y++) {
-        for (var x = 0; x < mapWidth; x++) {
-            var wall = map[y][x];
+// addItems = function () {
+//     for (var y = 0; y < mapHeight; y++) {
+//         for (var x = 0; x < mapWidth; x++) {
+//             var wall = map[y][x];
 
-            if (wall == 0)
-                if (Math.random() * 100 < 2) {
-                    var item = {
-                        type: 0,
-                        x: x,
-                        y: y
-                    }
-                    mapSprites.push(item)
-                }
-        }
-    }
-}
+//             if (wall == 0)
+//                 if (Math.random() * 100 < 2) {
+//                     var item = {
+//                         type: 0,
+//                         x: x,
+//                         y: y
+//                     }
+//                     mapSprites.push(item)
+//                 }
+//         }
+//     }
+// }
 
 //----------------------------------------------------------
 
@@ -68,8 +68,8 @@ renderSprites = function () {
         var sprite = sprites[i];
         if (sprite.visible) {
 
-            // var img = sprite.img;
-            // img.style.display = "block";
+            var img = sprite.img;
+            img.style.display = "block";
 
             // translate position to viewer space
             var dx = sprite.x + 0.5 - player.x;
