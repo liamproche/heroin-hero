@@ -200,24 +200,23 @@ addKeys = function () {
 
 //----------------------------------------------------------
 
-window.addEventListener("mousedown", (e)=>{
+window.addEventListener("click", (e)=>{
     if(e.target == document.getElementById('up-button')){
-        console.log('click')
         player.vertical = 1
     }
 })
 
-window.addEventListener("mousedown", (e)=>{
+window.addEventListener("click", (e)=>{
     if(e.target == document.getElementById('left-button')){
         player.direction = -1
     }
 })
-window.addEventListener("mousedown", (e)=>{
+window.addEventListener("click", (e)=>{
     if(e.target == document.getElementById('right-button')){
         player.direction = 1
     }
 })
-window.addEventListener("mousedown", (e)=>{
+window.addEventListener("click", (e)=>{
     if(e.target == document.getElementById('down-button')){
         player.vertical = -1
     }
@@ -246,11 +245,17 @@ window.addEventListener("mouseup", (e)=>{
         player.direction = 0
     }
 })
-window.addEventListener("mousedown", (e)=>{
-    
-    if(e.target == document.getElementById('space-bar',)){
+window.addEventListener("click", (e)=>{
+    const shootingUp = false
+    if(e.target == document.getElementById('space-bar',) && !shootingUp){
         document.getElementById('player').style.display = "none"
         document.getElementById('shootup').style.display = "block"
+        shootingUp = true
+    }
+    else{
+        document.getElementById('player').style.display = "block"
+        document.getElementById('shootup').style.display = "none"
+        shootingUp = false
     }
 })
 window.addEventListener("mouseup", (e)=>{
