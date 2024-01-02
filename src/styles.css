@@ -45,7 +45,6 @@ body {
 #player {
     position: absolute;
     left: 7%;
-    /* right: 7%; */
     top: 50%;
     z-index: 99997;
 }
@@ -65,7 +64,7 @@ body {
     top: 7%;
     left: 65%;
     z-index: 99995;
-    /* display: none; */
+    display: none;
 }
 .button{
     height: 50px;
@@ -74,7 +73,7 @@ body {
 #space-bar{
     width: 100%;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (mxa-width: 480px) {
     .button-div{
         display: block;
     }
